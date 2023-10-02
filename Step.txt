@@ -1,0 +1,3 @@
+1. Create a package.json file
+
+2.localhost:3000/api/products?api_key=1234567
