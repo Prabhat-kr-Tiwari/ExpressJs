@@ -1,6 +1,10 @@
 const router = require("express").Router();
-const apikeyMiddleware=require('../middleware/apiKey')
+const apikeyMiddleware=require('../middlewares/apiKey')
 module.exports = router;
+
+
+//router middleware
+// router.use(apikeyMiddleware)
 
 router.get("/", (request, response) => {
   response.render("index", {
@@ -21,21 +25,25 @@ router.get("/download",(request,response)=>{
 
 })
 
-router.get("/api/products",apikeyMiddleware,(request,response)=>{
 
-    response.json(
+// multiple middleware
+// router.get("/api/products",[apikeyMiddleware,apikeyMiddleware],(request,response)=>{
+  
+// router.get("/api/products",apikeyMiddleware,(request,response)=>{
 
-        [
-            {
-                id:'123',
-                name:'Chrome',
-            },
-            {
-                id:'124',
-                name:'Firefox',
-            }
-        ]
-    );
+//     response.json(
+
+//         [
+//             {
+//                 id:'123',
+//                 name:'Chrome',
+//             },
+//             {
+//                 id:'124',
+//                 name:'Firefox',
+//             }
+//         ]
+//     );
 
 
-})
+// })

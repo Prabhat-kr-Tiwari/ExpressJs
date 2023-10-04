@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head.ejs') %>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <title>Express Js</title> -->
+    <title><%= title %></title>
+  </head>
+  <body>
+    <!-- // if we are using static 
+    //middleware means we are 
+    //using a static content to be 
+    //displayed then we should give
+    // the full extension
+    // css file is static so we should put all the css file in the static folder
+     -->
+
+    <!-- <a href="/">Home</a>
+    <a href="/about">About</a> -->
+    <%- include('../partials/nav.ejs') %>
+
+    <div class="container mt-4">
+      <h1>Hello from Products</h1>
+    </div>
+    <div id="app"   class="container" mt-4></div>
+    <%- include('../partials/scripts.ejs') %>
+   
+  </body>
+</html>
